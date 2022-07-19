@@ -15,15 +15,18 @@ if (x % 2 === 0) {
   console.log('Упс, кажется вы ошиблись')
 }
 
-//Задание 2 НЕВЕРНОЕ
-let x = prompt('Введите любое значение');
-alert(typeof x);
-if (x === 'string') {
-  console.log('Вы ввели строку')
-} else if (x === 'number') {
-  console.log('Вы ввели число')
+//Задание 2
+let a = undefined ;
+if (typeof(a) === 'string') {
+  console.log('a - строка')
+} else if (a % 1 === 0) {
+  console.log('a - число')
+} else  if (typeof(a) === 'boolean') {
+  console.log('a - Boolean')
+}  else if (isNaN(a)) {
+  console.log('Тип \"a\" не определен')
 } else {
-  console.log('Упс, кажется вы ошиблись')
+  console.log('Тип \"a\" не определен')
 }
 
 //задание 3
