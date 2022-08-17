@@ -1,12 +1,23 @@
+//Создайте произвольный массив Map. Получите его ключи и выведите в консоль все значения в виде «Ключ — Х, значение — Y».
+//Используйте шаблонные строки.
+
 let family = new Map([
     ["mother", "salad"],
     ["father", "beer"],
     ["son",    "meat"]
   ]);
-  for (let name of family.keys()) {
-    console.log('ключ-' + name);
-  };
-  for (let food of family.values()) {
-    console.log('Значение-' + food);
-  };
-  //Есть понимание, что это задание выполнено неверно/не до конца, что необходимо вывести в консоль 3 позиции, а не 6, как в моем случае. Нахожусь на пути решения этой задачи
+  family.forEach(function(value, key) {
+    console.log(`Ключ - ${key}, Значение - ${value}`);
+  });
+
+  //Второй вариант решения:
+
+let family1 = new Map([
+  ["mother", "salad"],
+  ["father", "beer"],
+  ["son",    "meat"]
+]);
+  
+for (let pair of family1.entries()) {
+  console.log(`Ключ - ${pair[0]}, Значение - ${pair[1]}`)
+};
